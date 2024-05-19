@@ -13,9 +13,10 @@ class BookingService:
 
     def book_tickets(self, booking: BookingCreate) -> Optional[Booking]:
         print(f"events, {self.events}")
+
         event = next((e for e in self.events if e.id == booking.event_id), None)
         if not event or event.available_tickets < booking.number_of_tickets:
-            print("It came here before failing")
+            print("Failing due to no event or tickets not available")
             return None
 
         total_price = event.price_per_ticket * booking.number_of_tickets
@@ -27,4 +28,7 @@ class BookingService:
         event.available_tickets -= booking.number_of_tickets
         self.bookings.append(new_booking)
         return new_booking
+
+    def __repr__(self):
+        print(f" This is Booking service class, there are {len(self.bookings)} bookings ")
 

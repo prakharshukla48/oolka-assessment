@@ -11,6 +11,3 @@ class BookingCreate(BookingBase):
 class Booking(BookingBase):
     id: int
     total_price: float
-
-    class Config:
-        orm_mode = True

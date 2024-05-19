@@ -20,4 +20,4 @@ class EventService:
         return new_event
 
     def __repr__(self):
-        print (f"There are total {len(self.events)} events")
+        print (f"Object for Event Service, There are total {len(self.events)} events")
