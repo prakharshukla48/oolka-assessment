@@ -6,8 +6,7 @@ An overview of the project and its business logic.
 Instructions for setup and local execution.
 Details about the integrated third-party APIs and their roles in the project.
 
-# An overview of the project and its business logic :
-# Oolka Project
+## An overview of the project and its business logic :
 
 ## Overview
 
@@ -33,8 +32,13 @@ This project is a RESTful API service for managing event listings, bookings, and
   source venv/bin/activate  # On Windows: venv\Scripts\activate
   pip install -r requirements.txt
 
-3.Run the application:
+### execution
+
+1.Run the application:
   uvicorn app.main:app --reload
+2. Go to http://127.0.0.1:8000/docs to easily test your API's using Swagger UI.
+3. 
+
 ## Third Party API Integration
  ### Google maps API
  1.Install the Google Maps Library:
@@ -65,5 +69,11 @@ This project is a RESTful API service for managing event listings, bookings, and
   export RAZORPAY_API_KEY='your_api_key_here'
   export RAZORPAY_SECRET_KEY='your_secret_key_here'
 
-
+## Docker Setup
+1.Build the Docker image:
+   docker build -t event_service .
+2.Run the Docker container:
+   docker run -p 8000:8000 event_service
+3. Alternatively, use Docker Compose:
+   docker-compose up
 
