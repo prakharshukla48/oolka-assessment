@@ -1,10 +1,6 @@
 # oolka-assessment
 This repository contains the assessment for company oolka.
-
-Provide a README.md file with:
-An overview of the project and its business logic.
-Instructions for setup and local execution.
-Details about the integrated third-party APIs and their roles in the project.
+Demo of the app - https://drive.google.com/file/d/1h1-_9xORd18oYlX4XezMFn_UT0DAqNNQ
 
 ## An overview of the project and its business logic :
 
@@ -36,8 +32,10 @@ This project is a RESTful API service for managing event listings, bookings, and
 
 1.Run the application:
   uvicorn app.main:app --reload
+  
 2. Go to http://127.0.0.1:8000/docs to easily test your API's using Swagger UI.
-3. 
+
+3.Run the test cases directly from the console using run command , or you can use IDE to directly run it. 
 
 ## Third Party API Integration
  ### Google maps API
@@ -69,7 +67,7 @@ This project is a RESTful API service for managing event listings, bookings, and
   export RAZORPAY_API_KEY='your_api_key_here'
   export RAZORPAY_SECRET_KEY='your_secret_key_here'
 
-## Docker Setup
+## Docker Setup and execution 
 1.Build the Docker image:
    docker build -t event_service .
 2.Run the Docker container:
